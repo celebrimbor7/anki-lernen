@@ -1,0 +1,606 @@
+<span class="form">
+  {{Adjektiv Nominativ Singular}}
+  {{Form Nominativ Singular}}
+  {{#Form Nominativ Singular}}
+    <span class="formation_index">S.</span>
+  {{/Form Nominativ Singular}}
+</span><br>
+
+<!--Nach Deklination lernen-->
+<table class="declension">
+  <tr>
+    <td class="nom-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="gen-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Genitiv Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-gen-pr="{{Form Genitiv Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="dat-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Akkusativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="acc-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Akkusativ Singular}}"
+        data-acc-sg="{{Form Akkusativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="voc-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Nominativ Singular}}"
+        data-acc-sg="{{Form Akkusativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="voc-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="loc-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Nominativ Singular}}"
+        data-acc-sg="{{Form Akkusativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="ins-sg"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-gen-sg="{{Form Nominativ Singular}}"
+        data-acc-sg="{{Form Akkusativ Singular}}"
+        data-art="{{Artikel Nominativ, Singular}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-pr"
+        data-nom-sg="{{Form Nominativ Singular}}"
+        data-nom-pr="{{Form Nominativ Plural}}"
+        data-art="{{Artikel Nominativ Plural}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+</table><br>
+
+<!--Audio-->
+<span class="audio">
+  {{#Audio}}
+    {{Audio}}<br>
+  {{/Audio}}
+</span>
+
+<!--Bild-->
+<span class="image">
+  {{#Bild}}
+    {{Bild}}<br>
+  {{/Bild}}
+</span>
+
+<script>
+(() => {
+
+  // ── Formen ──────────────────────────────────────────────────────────────────
+
+  // Formen
+  const formNomSg = (document.querySelector("td.nom-sg")?.dataset.nomSg || "");
+  const formNomPr = (document.querySelector("td.nom-pr")?.dataset.nomPr || "");
+  const formGenSg = (document.querySelector("td.gen-sg")?.dataset.genSg || "");
+  const formGenPr = (document.querySelector("td.gen-pr")?.dataset.genPr || "");
+  const formAccSg = (document.querySelector("td.acc-sg")?.dataset.accSg || "");
+  const art1   = (document.querySelector("td.nom-sg")?.dataset.art   || "");
+  const art2 = (document.querySelector("td.nom-pr")?.dataset.art   || "");
+
+
+  // ── Stammformen ──────────────────────────────────────────────────────────
+
+  // Stammform bestimmen
+  function stemFormOutto(form) {
+    // Falls die Form auf einen Vokal endet, wird der letzte Vokal entfernt.
+    if (/[aeiouyáéíýóúěů]$/i.test(form)) {
+      return form.slice(0, -1);
+    }
+    return form;
+  }
+
+  // Stammformen
+  const stemFormNomSg = stemFormOutto(formNomSg);
+  const stemFormNomPr = stemFormOutto(formNomPr);
+  const stemFormGenSg = stemFormOutto(formGenSg);
+  const stemFormGenPr = stemFormOutto(formGenPr);
+  const stemFormAccSg = stemFormOutto(formAccSg);
+
+  // ── Erweichung ──────────────────────────────────────────────────────────
+
+  // Konsonanten erweichen
+  function weakeningConsonantOutto(stemForm) {
+    // Falls die Stammform auf -h, -ch, -k endet, wird der letzte Konsonant durch -z, -š, -c ersetzt.
+    if (/(h|ch|k)$/i.test(stemForm)) {
+      const match = stemForm.match(/(h|ch|k)$/i)[0];
+      const mapping = {
+        "h":  "z",
+        "ch": "š",
+        "k":  "c",
+      };
+      return stemForm.slice(0, -match.length) + mapping[match];
+    }
+    return stemForm;
+  }
+
+  // ── Deklination ───────────────────────────────────────────────────────────────
+
+  // Deklinieren
+  function declension(formNomSg, formNomPr, formGenSg, formGenPr, formAccSg) {
+
+    // Abbildung der Endungen
+    const endings = {
+      "nom-sg": "", "nom-pr": "",
+      "gen-sg": "", "gen-pr": "",
+      "dat-sg": "", "dat-pr": "",
+      "acc-sg": "", "acc-pr": "",
+      "voc-sg": "", "voc-pr": "",
+      "loc-sg": "", "loc-pr": "",
+      "ins-sg": "", "ins-pr": ""
+    };
+
+    // Abbildung der Stammformen
+    const stemForms = {
+      "nom-sg": stemFormNomSg,                  "nom-pr": stemFormNomPr || stemFormNomSg,
+      "gen-sg": stemFormGenSg || stemFormNomSg, "gen-pr": stemFormGenPr || stemFormNomPr || stemFormNomSg,
+      "dat-sg": stemFormNomSg,                  "dat-pr": stemFormNomPr || stemFormNomSg,
+      "acc-sg": stemFormNomSg,                  "acc-pr": stemFormNomPr || stemFormNomSg,
+      "voc-sg": stemFormNomSg,                  "voc-pr": stemFormNomPr || stemFormNomSg,
+      "loc-sg": stemFormNomSg,                  "loc-pr": stemFormNomPr || stemFormNomSg,
+      "ins-sg": stemFormNomSg,                  "ins-pr": stemFormNomPr || stemFormNomSg
+    };
+
+    // Erweichung anwenden
+    function weakenStemForm(key) {
+      stemForms[key] = weakeningConsonantOutto(stemForms[key]);
+    }
+
+    // M.
+    if (art1 === "ten") {
+
+      // Sg. M.
+      if (art1 === "ten") {
+
+        // Nom. Sg.
+        if (formNomSg) endings["nom-sg"] = formNomSg.slice(stemFormNomSg.length);
+
+        // Gen. Sg. M.
+        if (formGenSg) {
+          endings["gen-sg"] = formGenSg.slice(stemFormGenSg.length);
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["gen-sg"] = "u";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["gen-sg"] = "e";
+        }
+
+        // Dat. Sg.
+        if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["dat-sg"] = "u";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["dat-sg"] = "i";
+        }
+
+        // Akk. Sg.
+        endings["acc-sg"] = endings["nom-sg"];
+
+        // Vok. Sg.
+        if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["voc-sg"] = "e";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["voc-sg"] = "i";
+        }
+
+        // Lok. Sg.
+        if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["loc-sg"] = "ě, u";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["loc-sg"] = "i";
+        }
+
+        // Ins. Sg.
+        endings["ins-sg"] = "em";
+      }
+
+      // Sg. M.
+      if (art2 === "ty" || art2 === "ti") 
+
+        // Nom. Pr.
+        if (formNomPr) {
+          endings["nom-pr"] = formNomPr.slice(stemFormNomPr.length);
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["nom-pr"] = "y";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["nom-pr"] = "e";
+        }
+
+        // Gen. Pr.
+        if (formGenPr) {
+          endings["gen-pr"] = formGenPr.slice(stemFormGenPr.length);
+        } else {
+          endings["gen-pr"] = "ů";
+        }
+
+        // Dat. Pr.
+        endings["dat-pr"] = "ům";
+
+        // Akk. Pr.
+        endings["acc-pr"] = endings["nom-pr"];
+
+        // Vok. Pr.
+        endings["voc-pr"] = endings["nom-pr"];
+
+        // Lok. Pr.
+        if (/(h|ch|k)$/i.test(formNomSg)) {
+          weakenStemForm("loc-pr");
+          endings["loc-pr"] = "ích";
+        } else if (/(r|d|t|n)$/i.test(formNomSg)) {
+          endings["loc-pr"] = "ech";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["loc-pr"] = "ích";
+        }
+
+        // Ins. Pr.
+        if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["ins-pr"] = "y";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["ins-pr"] = "i";
+        }
+
+    // N.
+    } else if (art1 === "to") {
+
+      // Sg. N.
+      if (art1 === "to") {
+
+        // Nom. Sg.
+        if (formNomSg) endings["nom-sg"] = formNomSg.slice(stemFormNomSg.length);
+
+        // Gen. Sg.
+        if (formGenSg) {
+          endings["gen-sg"] = formGenSg.slice(stemFormGenSg.length);
+        } else if (formNomSg.endsWith("o")) {
+          endings["gen-sg"] = "a";
+        } else if (formNomSg.endsWith("e")) {
+          endings["gen-sg"] = "e";
+        }
+
+        // Dat. Sg.
+        if (formNomSg.endsWith("o")) {
+          endings["dat-sg"] = "u";
+        } else if (formNomSg.endsWith("e")) {
+          endings["dat-sg"] = "i";
+        }
+
+        // Akk. Sg.
+        if (formAccSg) {
+          endings["acc-sg"] = formAccSg.slice(stemFormAccSg.length);
+        } else {
+          endings["acc-sg"] = endings["nom-sg"];
+        }
+
+        // Vok. Sg.
+        endings["voc-sg"] = endings["nom-sg"];
+
+        // Lok. Sg.
+        if (formNomSg.endsWith("o")) {
+          endings["loc-sg"] = "ě";
+        } else if (formNomSg.endsWith("e")) {
+          endings["loc-sg"] = "i";
+        }
+
+        // Ins. Sg.
+        endings["ins-sg"] = "em";
+      }
+
+      // Pr. N.
+      if (art2 === "ta") {
+
+        // Nom. Pr.
+        if (formNomPr) {
+          endings["nom-pr"] = formNomPr.slice(stemFormNomPr.length);
+        } else if (formNomSg.endsWith("o")) {
+          endings["nom-pr"] = "a";
+        } else if (formNomSg.endsWith("e")) {
+          endings["nom-pr"] = "e";
+        }
+
+        // Gen. Pr.
+        if (formGenPr) {
+          endings["gen-pr"] = formGenPr.slice(stemFormGenPr.length);
+        } else if (formNomSg.endsWith("o")) {
+          endings["gen-pr"] = "";
+        } else if (formNomSg.endsWith("e")) {
+          endings["gen-pr"] = "í";
+        }
+
+        // Dat. Pr.
+        if (formNomSg.endsWith("o")) {
+          endings["dat-pr"] = "ům";
+        } else if (formNomSg.endsWith("e")) {
+          endings["dat-pr"] = "ím";
+        }
+
+        // Akk. Pr.
+        endings["acc-pr"] = endings["nom-pr"];
+
+        // Vok. Pr.
+        endings["voc-pr"] = endings["nom-pr"];
+
+        // Lok. Pr.
+        if (formNomSg.endsWith("o")) {
+          endings["loc-pr"] = "ech";
+        } else if (formNomSg.endsWith("e")) {
+          endings["loc-pr"] = "ích";
+        }
+
+        // Ins. Pr.
+        if (formNomSg.endsWith("o")) {
+          endings["ins-pr"] = "y";
+        } else if (formNomSg.endsWith("e")) {
+          endings["ins-pr"] = "i";
+        }
+      }
+
+    // F.
+    } else if (art1 === "ta") {
+
+      // Sg. F.
+      if (art1 === "ta") {
+
+        // Nom. Sg.
+        if (formNomSg) endings["nom-sg"] = formNomSg.slice(stemFormNomSg.length);
+
+        // Gen. Sg.
+        if (formGenSg) {
+          endings["gen-sg"] = formGenSg.slice(stemFormGenSg.length);
+        } else if (formNomSg.endsWith("a")) {
+          endings["gen-sg"] = "y";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["gen-sg"] = "ě";
+        } else if (formNomSg.endsWith("e")) {
+          endings["gen-sg"] = "e";
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["gen-sg"] = "i";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["gen-sg"] = "e";
+        }
+
+        // Dat. Sg.
+        if (formNomSg.endsWith("a")) {
+          if (/(h|ch|k)$/i.test(stemFormNomSg)) {
+            endings["dat-sg"] = "e";
+            weakenStemForm("dat-sg");
+          } else {
+            endings["dat-sg"] = "ě";
+          }
+        } else {
+          endings["dat-sg"] = "i";
+        }
+
+        // Akk. Sg.
+        if (formNomSg.endsWith("a")) {
+          endings["acc-sg"] = "u";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["acc-sg"] = "i";
+        } else if (formNomSg.endsWith("e")) {
+          endings["acc-sg"] = "i";
+        } else {
+          endings["acc-sg"] = "";
+        }
+
+        // Vok. Sg.
+        if (formNomSg.endsWith("a")) {
+          endings["voc-sg"] = "o";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["voc-sg"] = "ě";
+        } else if (formNomSg.endsWith("e")) {
+          endings["voc-sg"] = "e";
+        } else {
+          endings["voc-sg"] = "i";
+        }
+
+        // Lok. Sg.
+        endings["loc-sg"] = endings["dat-sg"];
+        weakenStemForm("loc-sg");
+
+        // Ins. Sg.
+        if (formNomSg.endsWith("a")) {
+          endings["ins-sg"] = "ou";
+        } else {
+          endings["ins-sg"] = "í";
+        }
+      }
+
+      // Pr. F.
+      if (art2 === "ty") {
+
+        // Nom. Pr.
+        if (formNomPr) {
+          endings["nom-pr"] = formNomPr.slice(stemFormNomPr.length);
+        } else if (formNomSg.endsWith("a")) {
+          endings["nom-pr"] = "y";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["nom-pr"] = "ě";
+        } else if (formNomSg.endsWith("e")) {
+          endings["nom-pr"] = "e";
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["nom-pr"] = "i";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["nom-pr"] = "e";
+        }
+
+        // Gen. Pr.
+        if (formGenPr) {
+          endings["gen-pr"] = formGenPr.slice(stemFormGenPr.length);
+        } else if (formNomSg.endsWith("a")) {
+          endings["gen-pr"] = "";
+        } else {
+          endings["gen-pr"] = "í";
+        }
+
+        // Dat. Pr.
+        if (formNomSg.endsWith("a")) {
+          endings["dat-pr"] = "ám";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["dat-pr"] = "ím";
+        } else if (formNomSg.endsWith("e")) {
+          endings["dat-pr"] = "ím";
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["dat-pr"] = "em";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["dat-pr"] = "ím";
+        }
+
+        // Akk. Pr.
+        endings["acc-pr"] = endings["nom-pr"];
+
+        // Vok. Pr.
+        endings["voc-pr"] = endings["nom-pr"];
+
+        // Lok. Pr.
+        if (formNomSg.endsWith("a")) {
+          endings["loc-pr"] = "ách";
+        } else if (formNomSg.endsWith("e")) {
+          endings["loc-pr"] = "ích";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["loc-pr"] = "ích";
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["loc-pr"] = "ech";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["loc-pr"] = "ích";
+        }
+
+        // Ins. Pr.
+        if (formNomSg.endsWith("a")) {
+          endings["ins-pr"] = "ami";
+        } else if (formNomSg.endsWith("ě")) {
+          endings["ins-pr"] = "ěmi";
+        } else if (formNomSg.endsWith("e")) {
+          endings["ins-pr"] = "emi";
+        } else if (/(h|ch|k|r|d|t|n)$/i.test(formNomSg)) {
+          endings["ins-pr"] = "ěmi";
+        } else if (/(ž|š|č|ř|c|j|ď|ť|ň)$/i.test(formNomSg)) {
+          endings["ins-pr"] = "emi";
+        }
+      }
+    }
+    return { endings, stemForms };
+  }
+
+  const { endings, stemForms } = declension(formNomSg, formNomPr, formGenSg, formGenPr, formAccSg);
+
+  // ── Numerus bestimmen ────────────────────────────────────────────────
+
+  const sg = !!art1;
+  const pr = !!art2;
+
+  const sgKeys = ["nom-sg", "gen-sg", "dat-sg", "acc-sg", "voc-sg", "loc-sg", "ins-sg"];
+  const prKeys = ["nom-pr", "gen-pr", "dat-pr", "acc-pr", "voc-pr", "loc-pr", "ins-pr"];
+
+  // Falls es nur den Plural gibt, werden alle Singular leer sein.
+  if (!sg && pr) {
+    sgKeys.forEach(key => {
+      endings[key]   = null;
+      stemForms[key] = null;
+    });
+  }
+
+  // Falls es nur den Singular gibt, werden alle Plural leer sein.
+  if (sg && !pr) {
+    prKeys.forEach(key => {
+      endings[key]   = null;
+      stemForms[key] = null;
+    });
+  }
+
+  // ── Farben ─────────────────────────────────────────────────────────────────
+
+  // Farbe bestimmen
+  function colourThrough(art1) {
+    // Falls der Artikel ten ist, ist die Farbe cyan, ... to ist, ist die Farbe gelb, ... ta ist, ist die Farbe magenta.
+    if (art1 === "ten") return "#2febd2";
+    if (art1 === "to")  return "#ebdf00";
+    if (art1 === "ta")  return "#ed3b7f";
+    return "";
+  }
+
+  // Farben
+  const colour = colourThrough(art1);
+
+  // ── Wiedergabe ─────────────────────────────────────────────────────────────────
+
+  // Ablauf
+  document.querySelectorAll("table td").forEach(td => {
+    const key        = td.classList[0];
+    const stemFormEl = td.querySelector(".stem-form");
+    const endingEl   = td.querySelector(".ending");
+
+    // Falls es keine Stammform gibt, wird die Zelle ausgeblendet.
+    if (stemForms[key] === null) {
+      td.style.display = "none";
+    } else {
+      // Falls es das Element gibt, wird die bestimmte Stammform genommen oder die Stammform Nom. Sg.
+      if (stemFormEl) stemFormEl.textContent = stemForms[key] || stemFormNomSg;
+      // Falls das Element gibt, wird die bestimmte Endung genommen oder die leere Zeichenkette.
+      if (endingEl) {
+        endingEl.textContent = endings[key] || "";
+        // es eine Farbe gibt, wird die auf das Element angewendet.
+        if (colour) endingEl.style.color = colour;
+      }
+    }
+  });
+})();
+</script>
