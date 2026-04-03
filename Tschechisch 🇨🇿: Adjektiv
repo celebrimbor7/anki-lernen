@@ -1,0 +1,313 @@
+<!--Das zu lernende Wort.-->
+<span class="form">
+  
+  {{Form (Nominativ, Singular, Maskulinum)}}
+  {{#Form (Nominativ, Singular, Maskulinum)}}
+    <span class="formation_index">S.</span>
+  {{/Form (Nominativ, Singular, Maskulinum)}}
+</span><br>
+
+<!--Nach Deklination lernen-->
+<table class="declension">
+  <tr>
+    <td class="nom-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="nom-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="gen-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="gen-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="dat-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="dat-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="acc-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="acc-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="loc-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="loc-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="ins-sg-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-sg-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-sg-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-pr-m" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-pr-n" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+    <td class="ins-pr-f" data-nom-sg-m="{{Form (Nominativ, Singular, Maskulinum)}}">
+      <span class="stem-form"></span><span class="ending"></span>
+    </td>
+  </tr>
+</table><br>
+
+
+
+<!--Nach Formation lernen-->
+<table>
+  <tr>
+    <td>
+      {{#Formation Verbalisierung}}
+        <span class="formation_index">V.</span> {{Formation Verbalisierung}}
+      {{/Formation Verbalisierung}}
+    </td>
+    <td>
+      {{#Formation Adverbialisierung}}
+        <span class="formation_index">Adv.</span> {{Formation Adverbialisierung}}
+      {{/Formation Adverbialisierung}}
+    </td>
+    <td>
+      {{#Formation Nominalisierung}}
+        <span class="formation_index">Adj.</span> {{Formation Nominalisierung}}
+      {{/Formation Nominalisierung}}
+    </td>
+  </tr>
+</table><br>
+
+
+
+<!--Nach Audio und Bild lernen-->
+<span class="audio">
+  {{#Audio}}
+    {{Audio}}<br>
+  {{/Audio}}
+</span>
+
+
+
+<!--Nach Bild lernen-->
+<span class="image">
+  {{#Bild}}
+    {{Bild}}<br>
+  {{/Bild}}
+</span>
+
+<script>
+(() => {
+
+  // ── Formen ──────────────────────────────────────────────────────────────────
+
+  // Form
+  const formNomSgM = (document.querySelector("td.nom-sg-m")?.dataset.nomSgM || "");
+
+  // ── Stammformen ──────────────────────────────────────────────────────────
+
+  // Stammform bestimmen
+  function stemFormOutto(form) {
+    if (/[aeiouyáéíýóúěů]$/i.test(form)) {
+      return form.slice(0, -1);
+    }
+    return form;
+  }
+
+  // Stammform
+  const stemFormNomSgM = stemFormOutto(formNomSgM);
+
+  // ── Erweichung ──────────────────────────────────────────────────────────
+
+  function weakeningConsonantOutto(stemForm) {
+    if (/(h|ch|k)$/i.test(stemForm)) {
+      const match = stemForm.match(/(h|ch|k)$/i)[0];
+      const mapping = {
+        "h":  "z",
+        "ch": "š",
+        "k":  "c",
+      };
+      return stemForm.slice(0, -match.length) + mapping[match];
+    }
+    return stemForm;
+  }
+
+  // ── Deklination ───────────────────────────────────────────────────────────────
+
+  // Deklinieren (Parameter auf formNomSgM reduziert)
+  function declension(formNomSgM) {
+
+    const endings = {
+      "nom-sg-m": "", "nom-sg-n": "", "nom-sg-f": "", "nom-pr-m": "", "nom-pr-n": "", "nom-pr-f": "",
+      "gen-sg-m": "", "gen-sg-n": "", "gen-sg-f": "", "gen-pr-m": "", "gen-pr-n": "", "gen-pr-f": "",
+      "dat-sg-m": "", "dat-sg-n": "", "dat-sg-f": "", "dat-pr-m": "", "dat-pr-n": "", "dat-pr-f": "",
+      "acc-sg-m": "", "acc-sg-n": "", "acc-sg-f": "", "acc-pr-m": "", "acc-pr-n": "", "acc-pr-f": "",
+      "voc-sg-m": "", "voc-sg-n": "", "voc-sg-f": "", "voc-pr-m": "", "voc-pr-n": "", "voc-pr-f": "",
+      "loc-sg-m": "", "loc-sg-n": "", "loc-sg-f": "", "loc-pr-m": "", "loc-pr-n": "", "loc-pr-f": "",
+      "ins-sg-m": "", "ins-sg-n": "", "ins-sg-f": "", "ins-pr-m": "", "ins-pr-n": "", "ins-pr-f": ""
+    };
+
+    const stemForms = {
+      "nom-sg-m": stemFormNomSgM, "nom-sg-f": stemFormNomSgM, "nom-sg-n": stemFormNomSgM, "nom-pr-m": stemFormNomSgM, "nom-pr-n": stemFormNomSgM, "nom-pr-f": stemFormNomSgM,
+      "gen-sg-m": stemFormNomSgM, "gen-sg-f": stemFormNomSgM, "gen-sg-n": stemFormNomSgM, "gen-pr-m": stemFormNomSgM, "gen-pr-n": stemFormNomSgM, "gen-pr-f": stemFormNomSgM,
+      "dat-sg-m": stemFormNomSgM, "dat-sg-f": stemFormNomSgM, "dat-sg-n": stemFormNomSgM, "dat-pr-m": stemFormNomSgM, "dat-pr-n": stemFormNomSgM, "dat-pr-f": stemFormNomSgM,
+      "acc-sg-m": stemFormNomSgM, "acc-sg-f": stemFormNomSgM, "acc-sg-n": stemFormNomSgM, "acc-pr-m": stemFormNomSgM, "acc-pr-n": stemFormNomSgM, "acc-pr-f": stemFormNomSgM,
+      "voc-sg-m": stemFormNomSgM, "voc-sg-f": stemFormNomSgM, "voc-sg-n": stemFormNomSgM, "voc-pr-m": stemFormNomSgM, "voc-pr-n": stemFormNomSgM, "voc-pr-f": stemFormNomSgM,
+      "loc-sg-m": stemFormNomSgM, "loc-sg-f": stemFormNomSgM, "loc-sg-n": stemFormNomSgM, "loc-pr-m": stemFormNomSgM, "loc-pr-n": stemFormNomSgM, "loc-pr-f": stemFormNomSgM,
+      "ins-sg-m": stemFormNomSgM, "ins-sg-f": stemFormNomSgM, "ins-sg-n": stemFormNomSgM, "ins-pr-m": stemFormNomSgM, "ins-pr-n": stemFormNomSgM, "ins-pr-f": stemFormNomSgM
+    };
+
+    function weakenStemForm(key) {
+      stemForms[key] = weakeningConsonantOutto(stemForms[key]);
+    }
+
+    // Sg. M.
+    endings["nom-sg-m"] = formNomSgM.endsWith("ý") ? "ý" : "í";
+    endings["gen-sg-m"] = formNomSgM.endsWith("ý") ? "ého" : "ího";
+    endings["dat-sg-m"] = formNomSgM.endsWith("ý") ? "ému" : "ímu";
+    endings["acc-sg-m"] = formNomSgM.endsWith("ý") ? "ého / ý" : "ího / í";
+    endings["voc-sg-m"] = formNomSgM.endsWith("ý") ? "ý" : "í";
+    endings["loc-sg-m"] = formNomSgM.endsWith("ý") ? "ém" : "ím";
+    endings["ins-sg-m"] = formNomSgM.endsWith("ý") ? "ým" : "ím";
+
+    // Pr. M.
+    endings["nom-pr-m"] = formNomSgM.endsWith("ý") ? "í" : "í";
+    if (formNomSgM.endsWith("ý")) weakenStemForm("nom-pr-m"); 
+    endings["gen-pr-m"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["dat-pr-m"] = formNomSgM.endsWith("ý") ? "ým" : "ím";
+    endings["acc-pr-m"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["voc-pr-m"] = formNomSgM.endsWith("ý") ? "í" : "í";
+    if (formNomSgM.endsWith("ý")) stemForms["voc-pr-m"] = stemForms["nom-pr-m"];
+    endings["loc-pr-m"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["ins-pr-m"] = formNomSgM.endsWith("ý") ? "ými" : "ími";
+
+    // Sg. F.
+    endings["nom-sg-f"] = formNomSgM.endsWith("ý") ? "á" : "í";
+    endings["gen-sg-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["dat-sg-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["acc-sg-f"] = formNomSgM.endsWith("ý") ? "ou" : "í";
+    endings["voc-sg-f"] = formNomSgM.endsWith("ý") ? "á" : "í";
+    endings["loc-sg-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["ins-sg-f"] = formNomSgM.endsWith("ý") ? "ou" : "í";
+
+    // Pr. F.
+    endings["nom-pr-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["gen-pr-f"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["dat-pr-f"] = formNomSgM.endsWith("ý") ? "ým" : "ím";
+    endings["acc-pr-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["voc-pr-f"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["loc-pr-f"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["ins-pr-f"] = formNomSgM.endsWith("ý") ? "ými" : "ími";
+
+    // Sg. N.
+    endings["nom-sg-n"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["gen-sg-n"] = formNomSgM.endsWith("ý") ? "ého" : "ího";
+    endings["dat-sg-n"] = formNomSgM.endsWith("ý") ? "ému" : "ímu";
+    endings["acc-sg-n"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["voc-sg-n"] = formNomSgM.endsWith("ý") ? "é" : "í";
+    endings["loc-sg-n"] = formNomSgM.endsWith("ý") ? "ém" : "ím";
+    endings["ins-sg-n"] = formNomSgM.endsWith("ý") ? "ým" : "ím";
+
+    // Pr. N.
+    endings["nom-pr-n"] = formNomSgM.endsWith("ý") ? "á" : "í";
+    endings["gen-pr-n"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["dat-pr-n"] = formNomSgM.endsWith("ý") ? "ým" : "ím";
+    endings["acc-pr-n"] = formNomSgM.endsWith("ý") ? "á" : "í";
+    endings["voc-pr-n"] = formNomSgM.endsWith("ý") ? "á" : "í";
+    endings["loc-pr-n"] = formNomSgM.endsWith("ý") ? "ých" : "ích";
+    endings["ins-pr-n"] = formNomSgM.endsWith("ý") ? "ými" : "ími";
+    
+    return { endings, stemForms };
+  }
+
+  // Deklinationen
+  const { endings, stemForms } = declension(formNomSgM);
+
+  // ── Wiedergabe ─────────────────────────────────────────────────────────────────
+
+  document.querySelectorAll("table td").forEach(td => {
+    const key        = td.classList[0];
+    const stemFormEl = td.querySelector(".stem-form");
+    const endingEl   = td.querySelector(".ending");
+
+    if (stemFormEl) stemFormEl.textContent = stemForms[key];
+    if (endingEl) endingEl.textContent = endings[key];
+  });
+})();
+</script>
